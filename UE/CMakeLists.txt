@@ -1,0 +1,13 @@
+aux_source_directory(. DIR_UE)
+add_library(UE STATIC ${DIR_UE})
+include_directories(../Socket)
+include_directories(../Utils)
+target_include_directories(UE PUBLIC ../log)
+target_include_directories(UE PUBLIC ../FCAE)
+
+target_link_libraries(UE PBC)
+target_link_libraries(UE GMP)
+target_link_libraries(UE SCS)
+target_link_libraries(UE PLOG)
+target_link_libraries(UE UTILS)
+target_link_libraries(UE FCAE)
